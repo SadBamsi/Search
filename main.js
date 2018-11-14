@@ -7,11 +7,11 @@ var input = document.getElementById('search-input');
 input.addEventListener('keyup', function () {
 	wordResult = [];
 	for (var i = 0; i < wordTip.length; i++) {
-		if ( wordTip[i].indexOf(0) == input.value ) {
+		if ( wordTip[i].includes(input.value)) {
 			wordResult.push(wordTip[i]);
 		}
 	}
-	console.log(wordResult);
+	
 });
 btn.addEventListener('click', function(){
 	window.location = `http://www.google.com/search?q=${input.value}&btnl`;
